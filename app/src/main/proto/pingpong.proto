@@ -1,0 +1,20 @@
+syntax = "proto3";
+
+package pingpong;
+
+// The greeting service definition.
+service PingPongService {
+    // Sends a greeting
+    rpc PingPong (Ping) returns (Pong) {}
+}
+
+// The request message containing the user's name.
+message Ping {
+    string pong = 1;
+}
+
+// The response message containing the greetings
+message Pong {
+    string ping = 1;
+}
+
